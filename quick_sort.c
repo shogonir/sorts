@@ -11,12 +11,12 @@ int pivot_index (int n, int *a) {
 }
 
 void quick_sort (int n, int *a) {
-    int i=0, j=n-1, swap, piv, piv_index;
+    int i=0, j=n-1, swap, piv, piv_index = pivot_index(n, a);
     
-    piv_index = pivot_index(n, a);
-    if (piv_index == -1) return;
-    else piv = a[piv_index];
-
+    if (piv_index == -1) return; // base case
+    
+    // recursive case
+    piv = a[piv_index];
     while (i <= j) {
         while (a[i] < piv) if (++i>=n) break;
         while (a[j] >= piv) if (--j<0) break;
