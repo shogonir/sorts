@@ -1,4 +1,4 @@
-void insertation_sort (int n, int *a) {
+void insertion_sort (int n, int *a) {
     int i, j, swap;
     for (i=1; i<n; i++) {
         j = i-1;
